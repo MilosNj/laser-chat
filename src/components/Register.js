@@ -13,8 +13,12 @@ export default function Register() {
           item.parentElement.classList.remove("is-active")
         );
         this.parentElement.classList.add("is-active");
-        document.getElementById("error_msg").innerHTML = "";
-        document.getElementById("login_msg").innerHTML = "";
+        if (document.getElementById("error_msg")) {
+          document.getElementById("error_msg").innerHTML = "";
+        }
+        if (document.getElementById("login_msg")) {
+          document.getElementById("login_msg").innerHTML = "";
+        }
       });
     });
   }, []);
